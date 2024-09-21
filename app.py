@@ -9,6 +9,7 @@ from PIL import Image
 import pdf2image
 import google.generativeai as genai
 
+
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 def get_gemini_response(input,pdf_cotent,prompt):
@@ -67,6 +68,7 @@ You are an skilled ATS (Applicant Tracking System) scanner with a deep understan
 your task is to evaluate the resume against the provided job description. give me the percentage of match if the resume matches
 the job description. First the output should come as percentage and then keywords missing and last final thoughts.
 """
+
 
 if submit1:
     if uploaded_file is not None:
